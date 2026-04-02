@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+    --font-snugle: "Snugle", sans-serif;
+    --font-nunito: "Nunito Sans", sans-serif;
+    
+    --color-fiesta-orange: #f57c00;
+    --color-fiesta-blue: #164fa1;
+    --color-fiesta-dark: #1a130c;
+}
+
+/* Design System Foundations */
+@layer base {
+    @font-face {
+        font-family: 'Snugle';
+        src: url('/fonts/Snugle/Snugle.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Nunito Sans';
+        src: url('/fonts/nunito-sans-webfont/NunitoSans-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    body {
+        font-family: var(--font-nunito);
+        color: var(--color-fiesta-dark);
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4, h5, h6, .font-snugle {
+        font-family: var(--font-snugle);
+        font-weight: normal;
+    }
+}
+
+@layer components {
+    /* Refined Glassmorphism */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-radius: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    /* Premium Interactive Elements */
+    .btn-orange {
+        @apply inline-flex items-center justify-center px-10 py-3.5 rounded-full font-bold text-white transition-all duration-300;
+        background-color: var(--color-fiesta-orange);
+        box-shadow: 0 4px 14px 0 rgba(245, 124, 0, 0.39);
+    }
+    .btn-orange:hover {
+        @apply -translate-y-0.5;
+        background-color: #e67300;
+        box-shadow: 0 6px 20px rgba(245, 124, 0, 0.45);
+    }
+
+    .btn-blue {
+        @apply inline-flex items-center justify-center px-10 py-3.5 rounded-full font-bold text-white transition-all duration-300;
+        background-color: var(--color-fiesta-blue);
+        box-shadow: 0 4px 14px 0 rgba(22, 79, 161, 0.39);
+    }
+    .btn-blue:hover {
+        @apply -translate-y-0.5;
+        background-color: #1a130c;
+        box-shadow: 0 6px 20px rgba(26, 19, 12, 0.45);
+    }
+
+    /* Elegant Navigation Links */
+    .nav-link {
+        @apply relative text-[15px] font-semibold text-gray-700 hover:text-fiesta-orange transition-colors duration-300;
+    }
+    .nav-link::after {
+        content: "";
+        @apply absolute bottom-[-4px] left-1/2 w-0 h-[2px] bg-fiesta-orange transition-all duration-300 -translate-x-1/2;
+    }
+    .nav-link:hover::after {
+        @apply w-full;
+    }
+
+    .hover-scale {
+        @apply transition-transform duration-300;
+    }
+    .hover-scale:hover {
+        @apply scale-102 -translate-y-1;
+    }
+}
