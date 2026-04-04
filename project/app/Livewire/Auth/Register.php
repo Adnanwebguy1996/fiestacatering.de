@@ -28,7 +28,14 @@ class Register extends Component
 
     public function mount()
     {
-        $this->countries = DB::table('countries')->where('status', 1)->get();
+        // Use a static list since countries table is not present
+        $this->countries = [
+            (object)['id' => 1, 'name' => 'Germany'],
+            (object)['id' => 2, 'name' => 'Austria'],
+            (object)['id' => 3, 'name' => 'Switzerland'],
+            (object)['id' => 4, 'name' => 'United States'],
+            (object)['id' => 5, 'name' => 'United Kingdom'],
+        ];
     }
 
     public function register()
@@ -40,6 +47,9 @@ class Register extends Component
             'email' => $this->email,
             'password' => Hash::make($this->password),
             'country_id' => $this->country_id,
+            'dob' => '2000-01-01', // Default required by schema
+            'phno' => '', // Default required by schema
+            'phno_cc' => '', // Default required by schema
             'role' => 1,
             'status' => 1,
         ]);
@@ -48,7 +58,7 @@ class Register extends Component
         Auth::login($user);
         session()->regenerate();
 
-        return redirect()->intended('/');
+        return redirect()->intended('/dashboard');
     }
 
     public function render()

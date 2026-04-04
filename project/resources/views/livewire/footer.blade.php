@@ -14,10 +14,10 @@
                 <h3 class="text-lg font-bold font-snugle mb-6">Quick Links</h3>
                 <ul class="space-y-4">
                     <li><a href="/" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">Home</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">Become a partner</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">FAQ's</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">About us</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">Inquiry form</a></li>
+                    <li><a href="{{ route('become-partner') }}" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">Become a partner</a></li>
+                    <li><a href="{{ route('faq') }}" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">FAQ's</a></li>
+                    <li><a href="{{ route('about') }}" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">About us</a></li>
+                    <li><a href="mailto:fiestacatering@online.de" class="text-gray-400 hover:text-[#f57c00] transition-colors duration-300">Inquiry form</a></li>
                 </ul>
             </div>
 

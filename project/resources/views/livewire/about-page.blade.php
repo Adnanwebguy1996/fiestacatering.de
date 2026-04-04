@@ -4,7 +4,7 @@
         <div class="absolute inset-0 flex">
             @foreach(['hero1.webp', 'hero2.webp', 'hero3.webp', 'hero4.webp'] as $img)
             <div class="flex-1">
-                <img src="/images/home/{{ $img }}" class="w-full h-full object-cover">
+                <img src="/images/{{ $img }}" class="w-full h-full object-cover">
             </div>
             @endforeach
         </div>
@@ -31,7 +31,7 @@
             <div class="relative">
                 <div class="bg-[#f57c00] absolute -right-6 top-1/2 -translate-y-1/2 w-48 h-[80%] rounded-r-3xl z-0"></div>
                 <div class="rounded-3xl overflow-hidden shadow-2xl relative z-10 border-8 border-white">
-                    <img src="/images/images/about_section_img.webp" alt="Fiesta Catering" class="w-full h-auto">
+                    <img src="/images/about_section_img.webp" alt="Fiesta Catering" class="w-full h-auto">
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
 
     <!-- 3. Full-width Hero Catchphrase -->
     <section class="h-[500px] relative overflow-hidden flex items-center justify-center text-center px-4">
-        <img src="/images/images/about_hero_full.webp" class="absolute inset-0 w-full h-full object-cover">
+        <img src="/images/about_hero_full.webp" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/40"></div>
         <div class="relative z-10 max-w-4xl space-y-8">
             <h2 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -63,7 +63,7 @@
                     ['name' => 'Finger food & snacks', 'img' => 'about_concept4.webp']
                 ] as $item)
                 <div class="relative rounded-3xl overflow-hidden h-48 group cursor-pointer shadow-lg">
-                    <img src="/images/images/{{ $item['img'] }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <img src="/images/{{ $item['img'] }}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <span class="text-white font-snugle text-3xl italic">{{ $item['name'] }}</span>
@@ -72,7 +72,7 @@
                 @endforeach
             </div>
             <div class="mt-12">
-                <a href="#" class="font-snugle text-[#f57c00] underline text-xl hover:scale-110 transition-all inline-block italic">Show Me More</a>
+                <a href="{{ route('caterers') }}" class="font-snugle text-[#f57c00] underline text-xl hover:scale-110 transition-all inline-block italic">Show Me More</a>
             </div>
         </div>
     </section>

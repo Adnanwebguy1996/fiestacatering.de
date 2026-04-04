@@ -4,7 +4,7 @@
         <div class="absolute inset-0 flex">
             @foreach(['hero1.webp', 'hero2.webp', 'hero3.webp', 'hero4.webp'] as $img)
             <div class="flex-1">
-                <img src="/images/home/{{ $img }}" class="w-full h-full object-cover">
+                <img src="/images/{{ $img }}" class="w-full h-full object-cover">
             </div>
             @endforeach
         </div>

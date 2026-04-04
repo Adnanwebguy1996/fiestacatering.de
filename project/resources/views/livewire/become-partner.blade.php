@@ -7,9 +7,9 @@
                 More bookings.<br>
                 100% commission-free.
             </h1>
-            <button class="btn-orange px-10 py-4 text-xl font-bold rounded-full shadow-lg hover:shadow-[#f57c00]/40">
+            <a href="{{ route('register') }}" class="inline-block btn-orange px-10 py-4 text-xl font-bold rounded-full shadow-lg hover:shadow-[#f57c00]/40">
                 Start for free now
-            </button>
+            </a>
         </div>
         <div class="lg:w-1/2 relative">
             <img src="/images/Partner.webp" alt="Partner Hero" class="w-full h-auto rounded-3xl drop-shadow-2xl">
@@ -77,7 +77,7 @@
                     <li>• No commission on orders – even during the trial!</li>
                     <li>• No automatic renewal – you decide what happens next</li>
                 </ul>
-                <button class="w-full py-3 bg-[#00befa] text-white rounded-xl font-bold shadow-lg hover:bg-[#164fa1]">Select</button>
+                <a href="{{ route('register') }}" class="block w-full py-3 bg-[#00befa] text-white text-center rounded-xl font-bold shadow-lg hover:bg-[#164fa1]">Select</a>
             </div>
 
             <!-- Basic -->
@@ -92,7 +92,7 @@
                     <li>• No commission on orders - just the subscription fee</li>
                     <li>• The subscription can be cancelled at the end of each term. If no cancellation is received in due time, the subscription will automatically renew for the same term at the price of €16.99.</li>
                 </ul>
-                <button class="w-full py-3 bg-[#f57c00] text-white rounded-xl font-bold shadow-lg hover:bg-[#e67300]">Select</button>
+                <a href="{{ route('register') }}" class="block w-full py-3 bg-[#f57c00] text-white text-center rounded-xl font-bold shadow-lg hover:bg-[#e67300]">Select</a>
             </div>
 
             <!-- Premium -->
@@ -110,7 +110,7 @@
                     <li>• No commission – you keep 100% of your revenue</li>
                     <li>• The subscription can be cancelled at the end of each term. If no cancellation is received in due time, the subscription will automatically renew for the same term at the price of €24.99.</li>
                 </ul>
-                <button class="w-full py-3 bg-[#164fa1] text-white rounded-xl font-bold shadow-lg hover:bg-[#1a130c]">Select</button>
+                <a href="{{ route('register') }}" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold shadow-lg hover:bg-[#1a130c]">Select</a>
             </div>
         </div>
     </section>

@@ -5,7 +5,7 @@
             <div class="flex-shrink-0">
                 <a href="{{ route('home') }}" class="group">
                     <img class="h-10 w-auto sm:h-12 group-hover:scale-105 transition-transform" 
-                         src="{{ asset('images/logo.webp') }}" 
+                         src="{{ asset('/images/fiesta-logo.png') }}" 
                          alt="Fiesta Catering">
                 </a>
             </div>
@@ -27,12 +27,21 @@
 
             <!-- Action Buttons -->
             <div class="hidden lg:flex items-center space-x-4">
-                <a href="#" class="px-6 py-2 rounded-full border-2 border-fiesta-blue text-fiesta-blue font-bold hover:bg-fiesta-blue hover:text-white transition-all text-[14px]">
+                <a href="mailto:fiestacatering@online.de" class="px-6 py-2 rounded-full border-2 border-fiesta-blue text-fiesta-blue font-bold hover:bg-fiesta-blue hover:text-white transition-all text-[14px]">
                     Reach us
                 </a>
-                <a href="{{ route('login') }}" class="px-8 py-2.5 rounded-full bg-fiesta-dark text-white font-bold hover:bg-fiesta-orange transition-all shadow-md text-[14px]">
-                    Login
-                </a>
+                @auth
+                    <a href="{{ route('user.dashboard') }}" class="px-6 py-2 rounded-full border-2 border-fiesta-dark text-fiesta-dark font-bold hover:bg-gray-100 transition-all text-[14px]">
+                        Dashboard
+                    </a>
+                    <a href="{{ route('logout') }}" class="px-8 py-2.5 rounded-full bg-red-600 text-white font-bold hover:bg-red-700 transition-all shadow-md text-[14px]">
+                        Logout
+                    </a>
+                @else
+                    <a href="{{ route('login') }}" class="px-8 py-2.5 rounded-full bg-fiesta-dark text-white font-bold hover:bg-fiesta-orange transition-all shadow-md text-[14px]">
+                        Login
+                    </a>
+                @endauth
             </div>
 
             <!-- Mobile menu button -->
@@ -57,8 +66,13 @@
             <a href="{{ route('about') }}" class="block py-3 text-lg font-bold text-gray-700 border-b border-gray-50">About Us</a>
             <a href="{{ route('faq') }}" class="block py-3 text-lg font-bold text-gray-700 border-b border-gray-50">FAQ's</a>
             <div class="pt-6 flex flex-col space-y-3">
-                <a href="#" class="w-full text-center py-3 border-2 border-fiesta-blue rounded-full text-fiesta-blue font-bold">Reach us</a>
-                <a href="{{ route('login') }}" class="w-full text-center py-3 bg-fiesta-dark text-white rounded-full font-bold shadow-lg">Login</a>
+                <a href="mailto:fiestacatering@online.de" class="w-full text-center py-3 border-2 border-fiesta-blue rounded-full text-fiesta-blue font-bold">Reach us</a>
+                @auth
+                    <a href="{{ route('user.dashboard') }}" class="w-full text-center py-3 border-2 border-fiesta-dark rounded-full text-fiesta-dark font-bold">Dashboard</a>
+                    <a href="{{ route('logout') }}" class="w-full text-center py-3 bg-red-600 text-white rounded-full font-bold shadow-lg">Logout</a>
+                @else
+                    <a href="{{ route('login') }}" class="w-full text-center py-3 bg-fiesta-dark text-white rounded-full font-bold shadow-lg">Login</a>
+                @endauth
             </div>
         </div>
     </div>

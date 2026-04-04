@@ -23,7 +23,13 @@ class Login extends Component
         // The old API required status = 1 (active)
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password, 'status' => 1], $this->remember)) {
             session()->regenerate();
-            return redirect()->intended('/');
+            
+            $user = Auth::user();
+            if ($user && $user->role == 0) {
+                return redirect()->intended('/admin');
+            }
+            
+            return redirect()->intended('/dashboard');
         }
 
         $this->addError('email', 'The provided credentials do not match our records or your account is inactive.');

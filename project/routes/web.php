@@ -13,6 +13,22 @@ Route::get('/caterers', CatererSearch::class)->name('caterers');
 Route::get('/about', AboutPage::class)->name('about');
 Route::get('/faq', FAQPage::class)->name('faq');
 
-// Auth Placeholders
-Route::get('/login', function() { return 'Login Page'; })->name('login');
-Route::get('/register', function() { return 'Register Page'; })->name('register');
+// Auth Routes
+Route::get('/login', \App\Livewire\Auth\Login::class)->name('login');
+Route::get('/register', \App\Livewire\Auth\Register::class)->name('register');
+Route::get('/caterers/{id}', \App\Livewire\CatererDetails::class)->name('caterer.details');
+
+// Dashboard Routes
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', \App\Livewire\User\Dashboard::class)->name('user.dashboard');
+    Route::get('/dashboard/trucks/create', \App\Livewire\User\TruckForm::class)->name('user.trucks.create');
+    Route::get('/admin', \App\Livewire\Admin\Dashboard::class)->name('admin.dashboard');
+
+    Route::get('/logout', function() {
+        \Illuminate\Support\Facades\Auth::logout();
+        session()->invalidate();
+        session()->regenerateToken();
+        return redirect('/');
+    })->name('logout');
+});
+

@@ -5,7 +5,7 @@
         <div class="absolute inset-0 flex">
             @foreach(['hero1.webp', 'hero2.webp', 'hero3.webp', 'hero4.webp'] as $image)
             <div class="flex-1 h-full">
-                <img src="{{ asset('images/home/' . $image) }}" class="w-full h-full object-cover" alt="Event Image">
+                <img src="{{ asset('images/' . $image) }}" class="w-full h-full object-cover" alt="Event Image">
             </div>
             @endforeach
         </div>
@@ -128,7 +128,7 @@
                 <!-- Example Card 1 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover-scale group cursor-pointer">
                     <div class="h-64 bg-gray-200 relative overflow-hidden">
-                        <img src="/images/images/catering1.webp" alt="Street Food Fiesta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="/images/catering1.webp" alt="Street Food Fiesta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute top-4 right-4 bg-orange-500 text-white p-2 rounded-full shadow-lg">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         </div>
@@ -137,27 +137,27 @@
                         <h3 class="text-2xl font-snugle text-[#1a130c] mb-1">Street Food Fiesta</h3>
                         <p class="text-xs font-bold text-[#f57c00] uppercase tracking-widest mb-4">Caterer</p>
                         <p class="text-sm text-gray-500 mb-6 line-clamp-2 italic">A authentic taste of Spanish food culture with a variety of street food and traditional dishes.</p>
-                        <a href="#" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#1a130c] transition-colors">See Details</a>
+                        <a href="{{ route('caterers') }}" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#1a130c] transition-colors">See Details</a>
                     </div>
                 </div>
 
                 <!-- Example Card 2 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover-scale group cursor-pointer">
                     <div class="h-64 bg-gray-200 relative overflow-hidden">
-                        <img src="/images/images/catering2.webp" alt="Vicenza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="/images/catering2.webp" alt="Vicenza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-6 text-left">
                         <h3 class="text-2xl font-snugle text-[#1a130c] mb-1">Vicenza</h3>
                         <p class="text-xs font-bold text-[#f57c00] uppercase tracking-widest mb-4">Food Truck</p>
                         <p class="text-sm text-gray-500 mb-6 line-clamp-2 italic">Fresh pasta, pizza, and Italian specialties served from our mobile kitchen for your event.</p>
-                        <a href="#" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#1a130c] transition-colors">See Details</a>
+                        <a href="{{ route('caterers') }}" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#1a130c] transition-colors">See Details</a>
                     </div>
                 </div>
 
                 <!-- Example Card 3 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover-scale group cursor-pointer">
                     <div class="h-64 bg-gray-200 relative overflow-hidden">
-                        <img src="/images/images/catering3.webp" alt="Sunny Food Truck" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <img src="/images/catering3.webp" alt="Sunny Food Truck" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute top-4 right-4 bg-orange-500 text-white p-2 rounded-full shadow-lg">
                             <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                         </div>
@@ -166,13 +166,13 @@
                         <h3 class="text-2xl font-snugle text-[#1a130c] mb-1">Sunny Food Truck</h3>
                         <p class="text-xs font-bold text-[#f57c00] uppercase tracking-widest mb-4">Food Truck</p>
                         <p class="text-sm text-gray-500 mb-6 line-clamp-2 italic">Healthy, fresh, and local ingredients prepared on site for a unique culinary experience.</p>
-                        <a href="#" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#1a130c] transition-colors">See Details</a>
+                        <a href="{{ route('caterers') }}" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#1a130c] transition-colors">See Details</a>
                     </div>
                 </div>
             </div>
 
             <div class="mt-12">
-                <a href="#" class="font-snugle text-[#f57c00] underline text-xl hover:scale-110 transition-all inline-block">
+                <a href="{{ route('caterers') }}" class="font-snugle text-[#f57c00] underline text-xl hover:scale-110 transition-all inline-block">
                     Show Me More
                 </a>
             </div>
@@ -185,13 +185,13 @@
             <h2 class="text-5xl font-snugle text-[#1a130c] mb-12 italic">Fiesta Catering Concepts</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="rounded-3xl overflow-hidden h-64 hover-scale cursor-pointer">
-                    <img src="/images/images/concept1.webp" class="w-full h-full object-cover">
+                    <img src="concept1.webp" class="w-full h-full object-cover">
                 </div>
-                <div class="rounded-3xl overflow-hidden h-64 hover-scale cursor-pointer">
-                    <img src="/images/images/concept2.webp" class="w-full h-full object-cover">
+                <div class="h-64 rounded-3xl overflow-hidden shadow-2xl relative">
+                    <img src="concept2.webp" class="w-full h-full object-cover">
                 </div>
-                <div class="rounded-3xl overflow-hidden h-64 hover-scale cursor-pointer">
-                    <img src="/images/images/concept3.webp" class="w-full h-full object-cover">
+                <div class="h-64 rounded-3xl overflow-hidden shadow-2xl relative md:col-span-2">
+                    <img src="concept3.webp" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -210,34 +210,29 @@
                 <!-- Top Caterer 1 -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border-t-4 border-[#164fa1] hover-scale group">
                     <div class="h-48 bg-gray-100 flex items-center justify-center p-8">
-                        <img src="/images/images/top_caterer1.webp" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform">
+                        <img src="top_caterer1.webp" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform">
                     </div>
                     <div class="p-6 text-left">
                         <h3 class="text-xl font-bold text-[#1a130c]">Wunderdar</h3>
                         <p class="text-xs text-[#f57c00] font-bold uppercase mb-4">Caterer</p>
-                        <a href="#" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#f57c00]">View Profile</a>
+                        <a href="{{ route('caterers') }}" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#f57c00]">View Profile</a>
                     </div>
                 </div>
                 <!-- Top Caterer 2 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border-t-4 border-[#164fa1] hover-scale group">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center p-8">
-                        <img src="/images/images/top_caterer2.webp" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform">
-                    </div>
-                    <div class="p-6 text-left">
-                        <h3 class="text-xl font-bold text-[#1a130c]">Pro City</h3>
-                        <p class="text-xs text-[#f57c00] font-bold uppercase mb-4">Food Truck</p>
-                        <a href="#" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#f57c00]">View Profile</a>
+                <div class="glass-card bg-white p-8 rounded-3xl shadow flex flex-col items-center text-center group">
+                    <div class="h-32 mb-6 flex items-center justify-center">
+                        <img src="top_caterer2.webp" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform">
                     </div>
                 </div>
-                <!-- Top Caterer 3 -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg border-t-4 border-[#164fa1] hover-scale group">
-                    <div class="h-48 bg-gray-100 flex items-center justify-center p-8">
-                        <img src="/images/images/top_caterer3.webp" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform">
+                <!-- Box 3 -->
+                <div class="glass-card bg-white p-8 rounded-3xl shadow flex flex-col items-center text-center group">
+                    <div class="h-32 mb-6 flex items-center justify-center">
+                        <img src="top_caterer3.webp" class="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform">
                     </div>
                     <div class="p-6 text-left">
                         <h3 class="text-xl font-bold text-[#1a130c]">Sunny Food Truck</h3>
                         <p class="text-xs text-[#f57c00] font-bold uppercase mb-4">Food Truck</p>
-                        <a href="#" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#f57c00]">View Profile</a>
+                        <a href="{{ route('caterers') }}" class="block w-full py-3 bg-[#164fa1] text-white text-center rounded-xl font-bold hover:bg-[#f57c00]">View Profile</a>
                     </div>
                 </div>
             </div>
@@ -256,7 +251,7 @@
                 @endforeach
             </div>
             <div class="mt-12">
-                <a href="#" class="font-snugle text-[#f57c00] underline text-lg hover:scale-110 transition-all inline-block">Show Me More</a>
+                <a href="{{ route('caterers') }}" class="font-snugle text-[#f57c00] underline text-lg hover:scale-110 transition-all inline-block">Show Me More</a>
             </div>
         </div>
     </section>
@@ -267,10 +262,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative">
                     <div class="rounded-3xl overflow-hidden shadow-2xl relative z-10">
-                        <img src="/images/images/about_main.webp" class="w-full h-auto">
+                        <img src="about_main.webp" class="w-full h-auto">
                     </div>
-                    <div class="absolute -bottom-10 -right-10 w-48 h-48 rounded-3xl overflow-hidden shadow-xl z-20 border-8 border-white">
-                        <img src="/images/images/about_sub.webp" class="w-full h-full object-cover">
+                    <div class="col-span-5 rounded-3xl overflow-hidden shadow-xl mt-12 md:-ml-8 md:mt-24 z-10 border-4 border-white">
+                        <img src="about_sub.webp" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="space-y-8">
@@ -288,7 +283,7 @@
                         </li>
                         @endforeach
                     </ul>
-                    <a href="#" class="inline-block btn-blue px-10 rounded-xl font-bold py-4">Find me more</a>
+                    <a href="{{ route('about') }}" class="inline-block btn-blue px-10 rounded-xl font-bold py-4">Find me more</a>
                 </div>
             </div>
         </div>
@@ -303,7 +298,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                 <!-- Large Image Card -->
                 <div class="lg:col-span-5 rounded-3xl overflow-hidden shadow-xl">
-                    <img src="/images/images/event_main.webp" class="w-full h-full object-cover">
+                    <img src="/images/event_main.webp" class="w-full h-full object-cover">
                 </div>
                 <!-- Features Grid -->
                 <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -327,7 +322,7 @@
             </div>
             
             <div class="mt-16">
-                <button class="btn-blue px-12 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-[#164fa1]/40">Find your caterer</button>
+                <a href="{{ route('caterers') }}" class="btn-blue px-12 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-[#164fa1]/40 inline-block">Find your caterer</a>
             </div>
         </div>
     </section>
